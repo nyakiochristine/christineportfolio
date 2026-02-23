@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyakio Christine | Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">NC<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Nyakio Christine</span></h1>
+            <p>Tech Enthusiast & Software Developer building functional, beautiful web experiences.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="https://github.com/nyakiochristine" target="_blank" class="btn secondary">GitHub Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Technical <span class="highlight">Skills</span></h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-html5"></i>
+                <h3>Frontend</h3>
+                <p>HTML5, CSS3, JavaScript, React,NextJS</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code-branch"></i>
+                <h3>Version Control</h3>
+                <p>Git, GitHub, CI/CD</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-server"></i>
+                <h3>Backend/Tools</h3>
+                <p>Node.js,Django, APIs, Firebase,Express</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+        <div class="project-container">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Weather Dashboard">
+                </div>
+                <div class="project-info">
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather tracking application using OpenWeather API. Features search history and 5-day forecasts.</p>
+                    <div class="tags"><span>JavaScript</span><span>API</span></div>
+                    <a href="https://github.com/nyakiochristine/weather-dashboard" target="_blank" class="project-link">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Journal App">
+                </div>
+                <div class="project-info">
+                    <h3>Journal App</h3>
+                    <p>A full-stack journaling platform for daily reflections, featuring protected routes and persistent storage.</p>
+                    <div class="tags"><span>React</span><span>Vercel</span></div>
+                    <a href="https://journal-app-nine-lemon.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Thrift Delivery">
+                </div>
+                <div class="project-info">
+                    <h3>Thrift Delivery</h3>
+                    <p>Logistics and delivery platform optimized for thrift commerce and local item tracking.</p>
+                    <div class="tags"><span>UI/UX</span><span>Frontend</span></div>
+                    <a href="https://github.com/nyakiochristine/thrift-delivery" target="_blank" class="project-link">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Community Website">
+                </div>
+                <div class="project-info">
+                    <h3>Light for Community</h3>
+                    <p>A non-profit website designed to connect volunteers with local social impact projects.</p>
+                    <div class="tags"><span>HTML/CSS</span><span>Social Impact</span></div>
+                    <a href="https://github.com/nyakiochristine/lightforthecommunitywebsite" target="_blank" class="project-link">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://via.placeholder.com/400x250" alt="Quote App">
+                </div>
+                <div class="project-info">
+                    <h3>Inspirational Quote App</h3>
+                    <p>Dynamic quote generator with sharing capabilities and social media integration.</p>
+                    <div class="tags"><span>TypeScript/Angular</span><span>DOM</span></div>
+                    <a href="https://github.com/nyakiochristine/quote-app" target="_blank" class="project-link">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+    <div class="contact-container">
+        <h2 class="section-title">Let's <span class="highlight">Connect</span></h2>
+        <p class="contact-subtitle">I'm currently looking for new opportunities. My inbox is always open!</p>
+        
+        <div class="contact">
+            <div class="contact-icon">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <h3>Email Me</h3>
+            <div class="email-wrapper">
+                <span id="emailText" class="contact-email">christinemwangi5725@gmail.com</span>
+                <button onclick="copyEmail()" class="copy-btn" title="Copy to clipboard">
+                    <i class="far fa-copy"></i>
+                </button>
+            </div>
+            <p class="working-hours">Available for freelance & full-time roles</p>
+            <div class="contact-btns">
+                <a href="mailto:christinemwangi5725@gmail.com" class="btn primary">Send Message</a>
+            </div>
+            <span id="copyMessage" class="copy-status">Email copied!</span>
+        </div>
+    </div>
+</section>
+
+    <footer>
+    <div class="footer-content">
+        <a href="#home" class="footer-logo">Nyakio<span>.</span></a>
+        
+        <div class="footer-socials">
+            <a href="https://github.com/nyakiochristine" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:your-email@example.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Nyakio Christine
+        </p>
+    </div>
+</footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
