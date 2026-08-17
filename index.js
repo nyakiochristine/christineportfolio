@@ -1,68 +1,34 @@
-// 1. Mobile Menu Toggle Logic
-const menuBtn = document.querySelector('.menu-btn');
-const navLinks = document.querySelector('.nav-links');
+const menuBtn = document.querySelector('#menuBtn');
+const navLinks = document.querySelector('#navLinks');
 
 menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    if (navLinks.classList.contains('active')) {
-        Object.assign(navLinks.style, {
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'absolute',
-            top: '60px',
-            left: '0',
-            width: '100%',
-            background: 'white',
-            padding: '2rem',
-            textAlign: 'center',
-            boxShadow: '0 5px 10px rgba(0,0,0,0.1)'
-        });
-    } else {
-        navLinks.style.display = 'none';
-    }
+  const isOpen = navLinks.classList.toggle('active');
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+  menuBtn.innerHTML = `<i class="fas fa-${isOpen ? 'xmark' : 'bars'}"></i>`;
 });
 
-// 2. Scroll Reveal Animation Logic
-const revealElements = document.querySelectorAll('.project-card, .skill-card');
+navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+}));
 
-// Initial setup for cards
-revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease-out';
+document.querySelector('#copyEmail').addEventListener('click', async () => {
+  const button = document.querySelector('#copyEmail');
+  const message = document.querySelector('#copyMessage');
+  try {
+    await navigator.clipboard.writeText(button.dataset.email);
+    message.textContent = 'Email copied to your clipboard.';
+  } catch {
+    message.textContent = `Email: ${button.dataset.email}`;
+  }
 });
 
-window.addEventListener('scroll', () => {
-    revealElements.forEach(reveal => {
-        const windowHeight = window.innerHeight;
-        const revealTop = reveal.getBoundingClientRect().top;
-        const revealPoint = 150;
+const companySections = [...document.querySelectorAll('.more-projects')];
+const smartRunningSection = companySections.find((section) => section.textContent.includes('SmartRunning'));
+const omniFreightSection = companySections.find((section) => section.textContent.includes('OmniFreight'));
 
-        if (revealTop < windowHeight - revealPoint) {
-            reveal.style.opacity = '1';
-            reveal.style.transform = 'translateY(0)';
-        }
-    });
-});
-
-//  Copy Email Logic
-function copyEmail() {
-    const email = document.getElementById("emailText").innerText;
-    const message = document.getElementById("copyMessage");
-
-    navigator.clipboard.writeText(email).then(() => {
-        message.classList.add("show");
-        setTimeout(() => {
-            message.classList.remove("show");
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy: ', err);
-    });
+if (smartRunningSection && omniFreightSection) {
+  smartRunningSection.querySelector('.skills-grid').append(omniFreightSection.querySelector('.skill-card'));
+  omniFreightSection.remove();
 }
-
-
-window.addEventListener('load', () => {
-    const name = document.querySelector('.typing-animation');
-    if (name) name.style.opacity = '1';
-});
