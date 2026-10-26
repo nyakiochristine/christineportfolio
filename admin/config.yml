@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: nyakiochristine/christineportfolio
+  branch: main
+  base_url: https://christinemwangiportfolio.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: assets
+public_folder: /assets
+
+collections:
+  - name: portfolio
+    label: Portfolio content
+    files:
+      - name: site
+        label: Main portfolio page
+        file: content/portfolio.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Introduction, name: introduction, widget: text }
+          - label: About section
+            name: about
+            widget: list
+            field: { label: Paragraph, name: paragraph, widget: text }
+          - label: Tech stack
+            name: techStack
+            widget: list
+            fields:
+              - { label: Area, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - label: Featured projects
+            name: projects
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: hidden }
+              - { label: Project name, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string } }
+              - { label: Highlight label, name: highlightLabel, widget: string, required: false }
+              - { label: Highlight text, name: highlightText, widget: text, required: false }
+              - { label: Link label, name: linkLabel, widget: string }
+              - { label: Link URL, name: linkUrl, widget: string }
+          - label: Work in progress
+            name: currentWork
+            widget: list
+            fields:
+              - { label: ID, name: id, widget: hidden }
+              - { label: Project name, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Tags, name: tags, widget: list, field: { label: Tag, name: tag, widget: string } }
+              - { label: Link label, name: linkLabel, widget: string, required: false }
+              - { label: Link URL, name: linkUrl, widget: string, required: false }

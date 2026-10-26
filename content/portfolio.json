@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "heading": "Building digital products that feel useful and human.",
+    "introduction": "Hi, I am Nyakio Christine. I am a software engineer who enjoys building things end to end from clean user interfaces to reliable backend services and data-driven features."
+  },
+  "about": [
+    "I’ve contributed across frontend, backend, and cloud, and I’m comfortable picking up whatever tools a problem needs.",
+    "What matters most to me is building useful products: writing readable code, designing simple systems, and improving things iteratively based on real usage. I’m especially interested in scalable web applications, and product-focused engineering.",
+    "I enjoy working with small, collaborative teams, asking good questions, and turning ambiguous ideas into working software. Always learning, always curious."
+  ],
+  "techStack": [
+    { "title": "Web interfaces", "description": "Vue.js, Angular, TypeScript, JavaScript, React, and responsive product interfaces." },
+    { "title": "Odoo ERP", "description": "Odoo 18/19 Enterprise, Odoo Studio, CRM, Appointments, Point of Sale, Project, Website, and low-code business process design." },
+    { "title": "AI automation", "description": "Python, Playwright, ElevenLabs API, FFmpeg, Pillow, and automated content-production workflows." },
+    { "title": "Backend and cloud", "description": "FastAPI, Django, Flask, GCP, Supabase, Terraform, Genkit, Git, and CI/CD." }
+  ],
+  "projects": [
+    {
+      "id": "her-ai",
+      "title": "Her AI Social Media Production Pipeline",
+      "description": "An AI-powered production system that turns approved AI-education briefs into branded LinkedIn and Instagram reels, covering narration, product demos, captions, composition, and final export checks. (Client contract, AI automation)",
+      "tags": ["Python", "Playwright", "ElevenLabs", "FFmpeg", "Pillow", "HTML/CSS"],
+      "highlightLabel": "Outcome",
+      "highlightText": "Client-ready content automation that reduces manual editing while keeping human approval, brand consistency, data privacy, and production quality in the workflow.",
+      "linkLabel": "View project on GitHub",
+      "linkUrl": "https://github.com/nyakiochristine/her-ai"
+    },
+    {
+      "id": "zuri-deck",
+      "title": "ZuriDeck Hospitality Operations",
+      "description": "An end-to-end Odoo demonstration for a coastal hospitality business, connecting guest bookings and sales enquiries with restaurant, charter, service-request, and back-office operations. (Demo)",
+      "tags": ["Odoo Studio", "Service Requests", "Appointments", "CRM", "Point of Sale", "Project"],
+      "highlightLabel": "Focus",
+      "highlightText": "Turn the customer journey into a connected operational workflow, from enquiry and booking through to service delivery.",
+      "linkLabel": "Read the case study",
+      "linkUrl": "zuri-deck.html"
+    },
+    {
+      "id": "meet-read",
+      "title": "Meet & Read NBO",
+      "description": "A digital home for Meet and Read NBO, the community-based silent book club I run in Nairobi. It brings readers together for focused reading, meaningful conversations, and the shared joy of books.",
+      "tags": ["Vue.js", "JavaScript", "Tailwind CSS", "Supabase"],
+      "linkLabel": "Visit Meet and Read NBO",
+      "linkUrl": "https://meetandreadnbo.vercel.app/"
+    },
+    {
+      "id": "light-community",
+      "title": "Light for Community",
+      "description": "A community initiative helping connect marginalized communities with access to quality education and health services, while supporting school rebuilding and nutrition initiatives.",
+      "tags": ["HTML", "CSS", "Responsive Design", "Social Impact"],
+      "linkLabel": "Visit Light for Community",
+      "linkUrl": "https://lightforcommunity.netlify.app/"
+    },
+    {
+      "id": "travelnest",
+      "title": "TravelNest",
+      "description": "Built and deployed a full-stack travel platform using React, Node.js, Express, and MongoDB, featuring itinerary planning, destination discovery, user authentication, social profiles, messaging, and business listings. The frontend is deployed on Vercel and the backend on Render.",
+      "tags": ["React", "Node.js", "Express", "MongoDB", "Full-stack"],
+      "linkLabel": "Visit TravelNest",
+      "linkUrl": "https://travelnestapp.vercel.app/"
+    }
+  ],
+  "currentWork": [
+    {
+      "id": "lindamama",
+      "title": "LindaMama",
+      "description": "Cervical Cancer Prediction System, a healthcare AI and ML interface built with React, Node.js, Express, and a Flask API. It integrates machine learning models for early diagnosis and personalized care recommendations, with secure data input, validation, and interactive visualizations.",
+      "tags": ["React", "Node.js", "Express", "Flask API", "Healthcare AI/ML"],
+      "linkLabel": "View LindaMama on GitHub",
+      "linkUrl": "https://github.com/nyakiochristine/lindadada"
+    },
+    {
+      "id": "quote-app",
+      "title": "Quote Application",
+      "description": "An Angular application where users can read quotes, add their own, and vote on existing quotes.",
+      "tags": ["Angular", "TypeScript"],
+      "linkLabel": "Visit Quote Application",
+      "linkUrl": "https://quote-application.vercel.app/"
+    },
+    {
+      "id": "smartrunning",
+      "title": "SmartRunning",
+      "description": "A mobile health-tech app that helps runners monitor potential injuries, understand their training patterns, and make more informed decisions. I contributed across both the frontend and backend.",
+      "tags": ["Flutter", "FastAPI", "GCP", "Terraform", "Genkit", "Full-stack"]
+    },
+    {
+      "id": "omnifreight",
+      "title": "OmniFreight",
+      "description": "I contributed to a freight-management platform that supports ocean, air, and road operations across quotation, shipment, and invoicing workflows.",
+      "tags": ["Odoo", "Python", "PostgreSQL", "Logistics", "Team Project"],
+      "linkLabel": "Explore OmniFreight",
+      "linkUrl": "https://omnifreight.io/"
+    }
+  ]
+}
